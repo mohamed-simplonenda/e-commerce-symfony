@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UtlisateurController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+   
+    <h1>Product</h1>
+    {% for product in products %}
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ product.Nom }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ product.Prix }}</td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ product.categorie }}</td>
+            </tr>
+            <tr>
+                <th>image</th>
+                <td>{{ product.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endfor %}
+</div>
+{% endblock %}
